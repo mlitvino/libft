@@ -6,13 +6,13 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:54:14 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/10/31 17:27:57 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:50:46 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*ptr_dest;
 	char	*ptr_src;

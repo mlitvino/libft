@@ -6,13 +6,13 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:31:21 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/10/31 17:27:41 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:34:19 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int a)
 {
-	if (32 <= a && a <= 127)
+	if (32 <= a && a <= 126)
 		return (1);
 	else
 		return (0);

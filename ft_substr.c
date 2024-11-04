@@ -6,11 +6,11 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:55:34 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/10/31 17:28:53 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:00:45 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {

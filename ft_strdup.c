@@ -6,11 +6,11 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:48:21 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/11/01 18:41:34 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:00:21 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *src)
 {

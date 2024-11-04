@@ -6,11 +6,11 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:41:56 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/10/31 17:27:51 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:32:26 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -23,7 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	if (n == 0)
 		return (0);
 	i = 0;
-	while (i < n - 1 && ptr_s1[i] == ptr_s2[i] && ptr_s1[i] && ptr_s2[i])
+	while (i < n - 1 && ptr_s1[i] == ptr_s2[i])
 	{
 		i++;
 	}

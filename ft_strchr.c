@@ -6,12 +6,16 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:36:00 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/10/31 17:28:18 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:08:03 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
+	if (!ft_isascii(c))
+		return ((char *)s);
 	while (*s)
 	{
 		if (*s == c)
@@ -20,5 +24,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }

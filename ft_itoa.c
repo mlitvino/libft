@@ -6,12 +6,11 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:35:50 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/11/01 18:41:47 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:41:39 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_strlen_itoa(int n)
 {

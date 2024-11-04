@@ -6,7 +6,7 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:39:15 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/11/01 18:37:55 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:45:36 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (s == NULL)
+		return;
 	write(fd, s, ft_strlen(s));
 }
