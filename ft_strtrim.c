@@ -6,49 +6,45 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:07:29 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/11/01 18:40:02 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:24:03 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_check_setch(char c, char const *set)
+static int	ft_check(char c, char const *set)
 {
-	int	i;
-
-	i = 0;
-	while (set[i])
+	while (*set)
 	{
-		if (c == set[i])
+		if (c == *set)
 			return (1);
-		i++;
+		set++;
 	}
 	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		left;
-	int		right;
-	int		s1_len;
-	int		i;
 	char	*s2;
+	int		end;
+	int		start;
+	int		i;
 
-	left = 0;
-	right = 0;
-	s1_len = ft_strlen(s1);
-	right = s1_len - 1;
-	while (ft_check_setch(s1[left], set) == 1)
-		left++;
-	while (ft_check_setch(s1[right], set) == 1)
-		right--;
-	s2 = malloc(sizeof(*s1) * (s1_len - left - (s1_len - right) + 1));
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	start = 0;
+	while (s1[start] && ft_check(s1[start], set))
+		start++;
+	end = ft_strlen(s1) - 1;
+	while (end >= start && ft_check(s1[end], set))
+		end--;
+	s2 = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (s2 == NULL)
 		return (NULL);
 	i = 0;
-	while (left != right)
+	while (start <= end)
 	{
-		s2[i++] = s1[left++];
+		s2[i++] = s1[start++];
 	}
 	s2[i] = '\0';
 	return (s2);

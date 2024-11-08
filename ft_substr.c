@@ -6,7 +6,7 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:55:34 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/11/04 14:00:45 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/06 17:09:06 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
 	char			*substr;
 	unsigned int	i;
+	size_t			str_len;
 
+	str_len = ft_strlen(str);
+	if (start >= str_len)
+		return (ft_strdup(""));
+	if (len > str_len - start)
+		len = str_len - start;
 	substr = malloc(sizeof(*str) * (len + 1));
 	if (substr == NULL)
 		return (NULL);

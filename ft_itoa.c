@@ -6,13 +6,13 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 14:35:50 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/11/04 16:41:39 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:29:46 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen_itoa(int n)
+static int	ft_strlen_itoa(int n)
 {
 	int	str_len;
 

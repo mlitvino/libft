@@ -6,11 +6,13 @@
 /*   By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:52:50 by mlitvino          #+#    #+#             */
-/*   Updated: 2024/10/31 16:45:15 by mlitvino         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:17:32 by mlitvino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char a)
+#include "libft.h"
+
+static int	ft_isspace(char a)
 {
 	if (a == ' ' || a == '\f' || a == '\n')
 		return (1);
@@ -21,25 +23,29 @@ int	ft_isspace(char a)
 
 int	ft_atoi(const char *str)
 {
-	int	res;
-	int	sign;
-	int	i;
+	int			res;
+	int			sign;
+	long int	temp;
 
 	res = 0;
 	sign = 1;
-	i = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	while (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
+	if (str == NULL)
+		return (0);
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '+' || *str == '-')
+		if (*str++ == '-')
 			sign *= -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
-		res = res * 10 + (str[i] - '0');
-		i++;
+		temp = res;
+		if (temp > temp * 10)
+		{
+			if (sign > 0)
+				return (-1);
+			return (0);
+		}
+		res = res * 10 + (*str++ - '0');
 	}
 	return (res * sign);
 }
