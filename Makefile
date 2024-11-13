@@ -26,7 +26,7 @@ BSRC = \
 OBJ = $(SRC:.c=.o)
 BOBJ = $(BSRC:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
