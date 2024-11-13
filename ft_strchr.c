@@ -14,8 +14,6 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (!ft_isascii(c))
-		return ((char *)s);
 	while (*s)
 	{
 		if (*s == c)
