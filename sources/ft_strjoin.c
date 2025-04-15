@@ -30,7 +30,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		s3[i] = s1[i];
 		i++;
 	}
-	while (i < s3_size && s1 && s2[j])
+	while (i < s3_size && s2 && s2[j])
 	{
 		s3[i] = s2[j];
 		i++;
