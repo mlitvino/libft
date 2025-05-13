@@ -6,7 +6,7 @@
 #    By: mlitvino <mlitvino@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/31 17:29:24 by mlitvino          #+#    #+#              #
-#    Updated: 2025/04/23 17:13:34 by mlitvino         ###   ########.fr        #
+#    Updated: 2025/05/13 12:55:32 by mlitvino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INCLD) | $(OBJ_DIR)
 $(NAME): $(OBJ)
 	$(AR) -rcs $@ $^
 
-bonus: $(NAME) .BONUS_DEPEND
+bonus: $(NAME) .BONUS_DEPEND $(BOBJ)
 
 .BONUS_DEPEND : $(NAME) $(BOBJ) $(OBJ)
 	$(AR) -rcs $(NAME) $(BOBJ) $(OBJ) $?
